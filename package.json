@@ -9,8 +9,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "cd client && npm install && npm run build",
-    "postinstall": "npm run build || echo 'React build failed, using server fallback'"
+    "build": "cd client && npm run build",
+    "postinstall": "cd client && npm install --omit=dev=false && npm run build || echo 'React build failed, using server fallback'"
   },
   "dependencies": {
     "express": "^4.18.2",
