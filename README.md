@@ -10,11 +10,11 @@ FlipLink is the world's most chaotic URL shortener. Every click has a 50% chance
 - **No External Dependencies**: Rick Roll video hosted locally (no YouTube ads!)
 - **Real-time Stats**: Track total clicks, successful redirects, and Rickrolls
 - **Beautiful UI**: Clean, responsive design with TailwindCSS
-- **Firebase Powered**: Serverless architecture for scalability
+- **Node.js Powered**: Simple server architecture
 
-## 🚀 Live Demo
+## 🚀 Deployment
 
-[Try FlipLink Now!](https://useless-project-c853e.web.app)
+Deploy to any Node.js platform like Railway, Heroku, or DigitalOcean!
 
 ## 🛠️ Tech Stack
 
@@ -34,7 +34,8 @@ FlipLink is the world's most chaotic URL shortener. Every click has a 50% chance
 ```bash
 git clone https://github.com/yourusername/fliplink.git
 cd fliplink
-npm run setup
+npm install
+cd client && npm install
 ```
 
 ### 2. Development
@@ -61,7 +62,7 @@ npm start
 
 ### 4. Access the App
 - **Development**: http://localhost:3000 (React dev server)
-- **Production**: http://localhost:5000 (Express server)
+- **Production**: http://localhost:5555 (Express server)
 
 ## 🎮 How It Works
 
