@@ -85,6 +85,10 @@ Visit `http://localhost:5555` and start rickrolling! 🎵
 ![Redirect Result](./screenshot/demo4=3.png)
 *The lucky 50%: Redirected to the intended URL.*
 
+### Build
+![build](./screenshot/build1.png)
+![build](./screenshot/build2.png)
+
 #### Diagrams
 
 ![Workflow](./screenshot/workflow.png)
