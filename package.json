@@ -10,7 +10,9 @@
     "build": "cd client && npm run build",
     "start": "node server.js",
     "setup": "npm install && cd client && npm install",
-    "heroku-postbuild": "npm run setup && npm run build"
+    "postinstall": "npm run setup && npm run build",
+    "deploy": "node deploy.js",
+    "test-local": "npm run postinstall && npm start"
   },
   "dependencies": {
     "express": "^4.18.2",

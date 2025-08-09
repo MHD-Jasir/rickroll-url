@@ -1,4 +1,6 @@
-# 🚀 FlipLink Deployment Guide
+# 🚀 FlipLink Deployment Guide - Node.js Edition
+
+FlipLink is now optimized for direct Node.js deployment without Docker! This makes it faster to deploy and easier to manage.
 
 ## Option 1: Deploy to Render (Recommended)
 
@@ -22,7 +24,7 @@ Render is perfect for full-stack Node.js applications like FlipLink.
 3. **Configure the Service**:
    - **Name**: `fliplink`
    - **Environment**: `Node`
-   - **Build Command**: `npm install && npm run build`
+   - **Build Command**: `npm run postinstall`
    - **Start Command**: `npm start`
    - **Plan**: Free (or paid for better performance)
 
@@ -32,7 +34,7 @@ Render is perfect for full-stack Node.js applications like FlipLink.
 
 5. **Deploy**:
    - Click "Create Web Service"
-   - Wait for deployment (5-10 minutes)
+   - Wait for deployment (3-5 minutes)
    - Your app will be live at `https://fliplink.onrender.com`
 
 ### Render Advantages:
@@ -42,6 +44,7 @@ Render is perfect for full-stack Node.js applications like FlipLink.
 - ✅ Custom domains
 - ✅ SSL certificates
 - ✅ Environment variables
+- ✅ No Docker complexity
 
 ---
 
@@ -78,24 +81,26 @@ Vercel is great for serverless deployments but has limitations for persistent st
 
 ---
 
-## Option 3: Deploy with Docker
+## Option 3: Deploy to Any Node.js Platform
 
-Perfect for any platform that supports Docker (AWS, Google Cloud, Azure, DigitalOcean, etc.)
+FlipLink now works on any platform that supports Node.js (AWS, Google Cloud, Azure, DigitalOcean, etc.)
 
-### Local Docker Testing:
+### Local Testing:
 ```bash
-# Build and run with Docker Compose
-docker-compose up --build
+# Install dependencies and build
+npm run postinstall
 
-# Or build and run manually
-docker build -t fliplink .
-docker run -p 5555:5555 -v $(pwd)/storage:/app/storage fliplink
+# Start the server
+npm start
+
+# Or run in development mode
+npm run dev
 ```
 
-### Deploy to any Docker platform:
-1. **Build**: `docker build -t fliplink .`
-2. **Push to registry**: `docker tag fliplink your-registry/fliplink`
-3. **Deploy**: Use your platform's Docker deployment method
+### Deploy to any Node.js platform:
+1. **Build**: `npm run postinstall`
+2. **Start**: `npm start`
+3. **Environment**: Set `PORT` if needed (defaults to 5555)
 
 ---
 
@@ -162,7 +167,7 @@ git push origin main
 # 2. Go to render.com
 # 3. New Web Service → Connect GitHub → Select FlipLink repo
 # 4. Use these settings:
-#    - Build: npm install && npm run build  
+#    - Build: npm run postinstall
 #    - Start: npm start
 # 5. Deploy!
 ```
