@@ -8,8 +8,7 @@
     "npm": ">=8.0.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "postinstall": "cd client && npm install --production=false && npm run build || echo 'Client build failed, server will run without React frontend'"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.18.2",
