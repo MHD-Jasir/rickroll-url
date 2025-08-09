@@ -9,10 +9,10 @@
     "client": "cd client && npm start",
     "build": "cd client && npm run build",
     "start": "node server.js",
-    "setup": "npm install && cd client && npm install",
+    "setup": "cd client && npm install",
     "postinstall": "npm run setup && npm run build",
     "deploy": "node deploy.js",
-    "test-local": "npm run postinstall && npm start"
+    "test-local": "npm install && npm run setup && npm run build && npm start"
   },
   "dependencies": {
     "express": "^4.18.2",
