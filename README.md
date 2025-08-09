@@ -81,15 +81,15 @@ Visit `http://localhost:5555` and start rickrolling! 🎵
 ![Stats Page](./screenshot/demo2.png)
 *View real-time stats of successful redirects and Rickrolls.*
 
-![Rickroll Result](./screenshot/demo3.png)
+![Rickroll Result](./screenshot/demo4.png)
 *The unlucky 50%: Rickrolled!*
 
-![Redirect Result](./screenshot/demo4.png)
+![Redirect Result](./screenshot/demo4=3.png)
 *The lucky 50%: Redirected to the intended URL.*
 
 #### Diagrams
 
-![Workflow](https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7)
+![Workflow](./screenshot/workflow.png)
 *Architecture showing how FlipLink decides your fate.*
 
 ---
