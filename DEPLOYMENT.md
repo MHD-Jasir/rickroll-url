@@ -78,7 +78,28 @@ Vercel is great for serverless deployments but has limitations for persistent st
 
 ---
 
-## Option 3: Deploy to Railway
+## Option 3: Deploy with Docker
+
+Perfect for any platform that supports Docker (AWS, Google Cloud, Azure, DigitalOcean, etc.)
+
+### Local Docker Testing:
+```bash
+# Build and run with Docker Compose
+docker-compose up --build
+
+# Or build and run manually
+docker build -t fliplink .
+docker run -p 5555:5555 -v $(pwd)/storage:/app/storage fliplink
+```
+
+### Deploy to any Docker platform:
+1. **Build**: `docker build -t fliplink .`
+2. **Push to registry**: `docker tag fliplink your-registry/fliplink`
+3. **Deploy**: Use your platform's Docker deployment method
+
+---
+
+## Option 4: Deploy to Railway
 
 1. **Connect to Railway**:
    - Go to [railway.app](https://railway.app)
@@ -95,7 +116,7 @@ Vercel is great for serverless deployments but has limitations for persistent st
 
 ---
 
-## Option 4: Deploy to Heroku
+## Option 5: Deploy to Heroku
 
 1. **Install Heroku CLI**:
    ```bash
